@@ -1,4 +1,132 @@
-<p>My web pages are in serious need of an overhaul. In the past I’ve built my sites using <a href="https://www.realmacsoftware.com/rapidweaver/">RapidWeaver</a>, but it was never particularly future proof: something always needed updating.</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>CUPS talk</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="austen lamacraft" href="/notebook/feed.xml">
+
+    <!-- Customized Bootstrap + Font Awesome + Solarized -->
+    <link href="/notebook/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/notebook/images/favicon.png"/>
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+
+
+
+	<!-- jQuery -->
+	<script src="/notebook/js/jquery.min.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="/notebook/js/transition.js"></script>
+	<script src="/notebook/js/collapse.js"></script>
+
+<!-- KaTeX -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/katex.min.css" integrity="sha384-exe4Ak6B0EoJI0ogGxjJ8rn+RN3ftPnEQrGwX59KTCl5ybGzvHGKjhPKk/KC3abb" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/katex.min.js" integrity="sha384-OMvkZ24ANLwviZR2lVq8ujbE/bUO8IR1FdBrKLQBI14Gq5Xp/lksIccGkmKL8m+h" crossorigin="anonymous"></script>
+
+<!--  KaTeX auto-render -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/contrib/auto-render.min.js" integrity="sha384-cXpztMJlr2xFXyDSIfRWYSMVCXZ9HeGXvzyKTYrn03rsMAlOtIQVzjty5ULbaP8L" crossorigin="anonymous"></script>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		renderMathInElement(document.body);
+	});
+</script>
+
+</head>
+
+<body>
+
+	<div id="header">
+		<nav class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					
+					<object class="logo navbar-brand" data="/notebook/images/logo.svg" type="image/svg+xml"></object>
+					<a class="navbar-brand" href="/notebook/">austen lamacraft</a>
+					
+				</div>
+				<div class="collapse navbar-collapse" id="navbar-collapse-element">
+					<ul class="nav navbar-nav navbar-right">
+						
+						<li class="active">
+						
+						<a href="/notebook/blog/">blog</a>
+						</li>
+						
+						<li>
+						
+						<a href="/notebook/papers/">papers</a>
+						</li>
+						<!-- 
+						<li>
+						
+						<a href="/notebook/projects/">projects</a></li>
+						
+						<li>
+						
+						<a href="/notebook/team/">team</a></li> -->
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<div class="container">
+
+	
+
+<div class="blog-post">
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<div class="media">
+				<div class="media-body">
+					<div class="title media-heading">
+						<a href="/notebook/blog/tech/new-site/" class="off">CUPS talk</a>
+					</div>
+					<p>
+					<div class="smallhead">
+						10 Dec 2016
+						
+						by <a class="off" href="/notebook/team/austen-lamacraft/">austen</a>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+
+	<div class="bigspacer"></div>
+
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			
+			<div class="post">
+				<p>My web pages are in serious need of an overhaul. In the past I’ve built my sites using <a href="https://www.realmacsoftware.com/rapidweaver/">RapidWeaver</a>, but it was never particularly future proof: something always needed updating.</p>
 
 <p>Now I’m switching to <a href="https://jekyllrb.com">Jekyll</a>, which I used for the first time over the summer. Relative to a WYSIWYG editor it’s a bit more work, but you feel like you know what’s going on under the bonnet. There’s a large ecosystem, lots of <a href="http://themes.jekyllrc.org">themes</a>, free hosting on <a href="https://pages.github.com">GitHub Pages</a>. The ease of writing in Markdown and rendering mathematics with <a href="https://www.mathjax.org">MathJax</a> is wonderful.</p>
 
@@ -7,3 +135,21 @@
 <p>See?</p>
 
 <p>It would be great to integrate this with <a href="https://symplectic.admin.cam.ac.uk">Symplectic</a> and / or <a href="http://orcid.org">ORCID</a> to get an automatically updated publication list. Let’s see.</p>
+
+			</div>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+
+	<div class="bigspacer"></div>
+	<div class="spacer"></div>
+
+</div>
+
+
+	</div>
+
+	<div id="footer"><span style="display:none">foo</span></div>
+
+</body>
+</html>
