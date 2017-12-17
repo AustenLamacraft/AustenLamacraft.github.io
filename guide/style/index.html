@@ -79,6 +79,11 @@
 						
 						<a href="/papers/">papers</a>
 						</li>
+						
+						<li>
+						
+						<a href="/talks/">talks</a>
+						</li>
 						<!-- 
 						<li>
 						
@@ -118,14 +123,13 @@
 
 <h2 id="headings">Headings</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># Heading 1
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Heading 1
 ## Heading 2
 ### Heading 3
 #### Heading 4
 ##### Heading 5
 ###### Heading 6
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h1 id="heading-1">Heading 1</h1>
 <h2 id="heading-2">Heading 2</h2>
@@ -138,13 +142,12 @@
 
 <h2 id="text-styling">Text styling</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Italicize text by surrounding it in *asterisks* or _underscores_.
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Italicize text by surrounding it in *asterisks* or _underscores_.
 Bold text by surrounding it with **double asterisks** or __double underscores__.
 Combine with **_double asterisks plus underscores_**.
 Strike-through text with ~~double tildes~~.
 Superscript contiguous text with carrots like x^2y, surround with parentheses for more complex expressions like x^(2y + 3z).
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Italicize text by surrounding it in <em>asterisks</em> or <em>underscores</em>.</p>
 
@@ -160,7 +163,7 @@ Superscript contiguous text with carrots like x^2y, surround with parentheses fo
 
 <h2 id="lists">Lists</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>* Thing one with an asterisk
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* Thing one with an asterisk
 + Thing two with a plus
 - Thing three with a minus
 
@@ -169,8 +172,7 @@ Superscript contiguous text with carrots like x^2y, surround with parentheses fo
   * The first part of the 2nd order
   * The second part of the 2nd order
 3. The third order of business
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <ul>
   <li>Thing one with an asterisk</li>
@@ -193,10 +195,9 @@ Superscript contiguous text with carrots like x^2y, surround with parentheses fo
 
 <h2 id="links">Links</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>[This is an external link to Google](http://www.google.com/)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[This is an external link to Google](http://www.google.com/)
 [This is a relative link to elsewhere in the site](/projects/)
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><a href="http://www.google.com/">This is an external link to Google</a></p>
 
@@ -208,11 +209,10 @@ Superscript contiguous text with carrots like x^2y, surround with parentheses fo
 
 <p>Images work like links, but with a prefaced !.  This supports SVG as well PNG, JPG, etc…</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>![](/images/papers/bedford-canalization.png)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![](/images/papers/bedford-canalization.png)
 ![An image with alt text](/images/papers/bedford-global-migration.png)
 ![](/images/logo.svg)
-</code></pre>
-</div>
+</code></pre></div></div>
 <p><img src="/images/papers/bedford-canalization.png" alt="" /></p>
 
 <p><img src="/images/papers/bedford-global-migration.png" alt="An image with alt text" /></p>
@@ -223,9 +223,8 @@ Superscript contiguous text with carrots like x^2y, surround with parentheses fo
 
 <p>Can always drop in HTML, so sizing adjustments can be done with:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;img style="width:30px;" src="/images/logo.svg"/&gt;
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img style="width:30px;" src="/images/logo.svg"/&gt;
+</code></pre></div></div>
 
 <p><img style="width:30px;" src="/images/logo.svg" /></p>
 
@@ -233,9 +232,8 @@ Superscript contiguous text with carrots like x^2y, surround with parentheses fo
 
 <h2 id="code">Code</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>A bit of inline monospaced font can be made `by surrounding text with backticks`.
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A bit of inline monospaced font can be made `by surrounding text with backticks`.
+</code></pre></div></div>
 
 <p>A bit of inline monospaced font can be made <code class="highlighter-rouge">by surrounding text with backticks</code>.</p>
 
@@ -243,7 +241,7 @@ Superscript contiguous text with carrots like x^2y, surround with parentheses fo
 
 <p>Larger code blocks can be made by surrounding the block with three backticks <code>```</code>, and code can be highlighted by specifying language after the backticks, like so:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>```javascript
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```javascript
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
@@ -252,30 +250,26 @@ alert(s);
 s = "Ruby syntax highlighting";
 puts s
 ```
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="s2">"JavaScript syntax highlighting"</span><span class="p">;</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="s2">"JavaScript syntax highlighting"</span><span class="p">;</span>
 <span class="nx">alert</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">s</span> <span class="o">=</span> <span class="s2">"Ruby syntax highlighting"</span><span class="p">;</span>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">s</span> <span class="o">=</span> <span class="s2">"Ruby syntax highlighting"</span><span class="p">;</span>
 <span class="nb">puts</span> <span class="n">s</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <hr />
 
 <h2 id="tables">Tables</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>column A | column B | column C | column D
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>column A | column B | column C | column D
 -------- | -------- | -------- | --------
 1A       | 1B       | 1C       | 1D
 2A       | 2B       | 2C       | 2D
 3A       | 3B       | 3C       | 3D
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <table>
   <thead>
@@ -312,9 +306,8 @@ puts s
 
 <h2 id="blockquotes">Blockquotes</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&gt; The data we have is not the data we want, and the data we need is not the data we have.
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; The data we have is not the data we want, and the data we need is not the data we have.
+</code></pre></div></div>
 
 <blockquote>
   <p>The data we have is not the data we want, and the data we need is not the data we have.</p>
@@ -332,11 +325,10 @@ puts s
 
 <p>Use three of more hyphens, asterisks or underscores.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>***
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>***
 ---
 ___
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <hr />
 <hr />
@@ -344,14 +336,13 @@ ___
 
 <h2 id="line-breaks">Line breaks</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Here's a line for us to start with.
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Here's a line for us to start with.
 
 This line is separated by two newlines, so it will be a separate paragraph.
 
 This line is also a separate paragraph, though...
 Adding a single line break does not create a new paragraph.
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Here’s a line for us to start with.</p>
 

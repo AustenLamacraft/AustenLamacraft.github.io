@@ -1,1 +1,9 @@
-{ "posts" : [ "/blog/talk/CUPS-talk/", "/blog/tech/new-site/" ] }
+{
+  "posts" : [
+    
+    "/blog/talk/CUPS-talk/",
+    
+    "/blog/tech/new-site/"
+    
+  ]
+}

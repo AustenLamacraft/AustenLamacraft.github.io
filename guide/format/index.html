@@ -79,6 +79,11 @@
 						
 						<a href="/papers/">papers</a>
 						</li>
+						
+						<li>
+						
+						<a href="/talks/">talks</a>
+						</li>
 						<!-- 
 						<li>
 						
@@ -110,18 +115,29 @@
 	</div>
 	<div class="col-md-8">	
 		<div class="post">
-			<h2 id="blog">Blog</h2>
+			<h2 id="talks">Talks</h2>
+
+<p>Raw markdown goes in <code class="highlighter-rouge">talks-markdown</code> with no front matter, and wrapped in <code class="highlighter-rouge">&lt;pre&gt;...&lt;/pre&gt;</code> tags to prevent Jekyll turning them into html.</p>
+
+<p>Front matter goes in <code class="highlighter-rouge">talks/_posts/2017-12-14-microsoft-mps.md</code> (say) with the <code class="highlighter-rouge">talk</code> field pointing to the file in <code class="highlighter-rouge">talks-markdown</code>. Here you can also put the <code class="highlighter-rouge">assets/</code> directory for the talk slides. There is a plugin (<code class="highlighter-rouge">jekyll-postfiles</code>) that moves these to the relevant folder of <code class="highlighter-rouge">_site/</code>. Strangely, <code class="highlighter-rouge">.svg</code> and <code class="highlighter-rouge">.js</code> files mess it up, but <code class="highlighter-rouge">.png</code> are fine.</p>
+
+<p>Defaults are set to be the same as for <a href="https://github.com/webpro/reveal-md#custom-slide-separators">reveal-md</a>, so if works nicely there, it should work here too!</p>
+
+<p>Note that subscripts are a bit tricky, as the underscore in LaTeX has to be escaped with backslash <code class="highlighter-rouge">\_</code>. An alternative is to wrap the whole math block in `…`.</p>
+
+<p>Reveal options can be set in the <code class="highlighter-rouge">revealOptions</code> section of the front matter.</p>
+
+<h2 id="blog">Blog</h2>
 
 <p>Each blog post is a Markdown file in <a href="https://github.com/blab/blotter/tree/master/blog/_posts"><code class="highlighter-rouge">blog/_posts/</code></a>.  File names have post date and a short title.  The short title is used for permanent URL links, so must be unique to each blog post.  For example: <a href="https://github.com/blab/blotter/blob/master/blog/_posts/2012-02-20-github-of-science.md"><code class="highlighter-rouge">2012-02-20-github-of-science.md</code></a>.  Posts have the following YAML top matter:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>---
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
 layout: post
 title: Some thoughts on a GitHub of Science
 author: Trevor Bedford
 image: /images/blog/github_large.png
 ---
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Tags <code class="highlighter-rouge">layout</code>, <code class="highlighter-rouge">title</code> and <code class="highlighter-rouge">author</code> are required, while <code class="highlighter-rouge">image</code> is optional.  The author name should correspond to the team member <code class="highlighter-rouge">title</code> tag for proper linking of posts to authors.  All blog images should live in <a href="https://github.com/blab/blotter/tree/master/images/blog"><code class="highlighter-rouge">images/blog/</code></a> and be referred as relative to the base directory, begining with <code class="highlighter-rouge">/images/</code>.</p>
 
@@ -129,7 +145,7 @@ image: /images/blog/github_large.png
 
 <p>Each paper lives in <a href="https://github.com/blab/blotter/tree/master/papers/_posts"><code class="highlighter-rouge">papers/_posts/</code></a>.  File names, used to construct permalinks, are first author plus short (1-2 word) title, for example <a href="https://github.com/blab/blotter/blob/master/papers/_posts/2012-04-30-bedford-canalization.md"><code class="highlighter-rouge">2012-04-30-bedford-canalization.md</code></a>.   Papers have the following YAML metadata:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>---
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
 layout: paper
 title: Canalization of the evolutionary trajectory of the human influenza virus
 image: /images/papers/bedford-canalization.png
@@ -141,8 +157,7 @@ pdf: /pdfs/papers/bedford-canalization.pdf
 supplement: /pdfs/papers/bedford-canalization-supp.pdf
 github: http://github.com/trvrb/canalization
 ---
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Tags <code class="highlighter-rouge">layout</code>, <code class="highlighter-rouge">title</code>, <code class="highlighter-rouge">image</code>, <code class="highlighter-rouge">authors</code>, <code class="highlighter-rouge">year</code>, <code class="highlighter-rouge">ref</code>, <code class="highlighter-rouge">journal</code> are required.  Tags <code class="highlighter-rouge">pdf</code>, <code class="highlighter-rouge">supplement</code>, <code class="highlighter-rouge">github</code> are optional.  The image should be a 120x120 pixel tile.  All paper images and PDFs should reside in <a href="https://github.com/blab/blotter/tree/master/images/papers"><code class="highlighter-rouge">images/papers/</code></a> and <a href="https://github.com/blab/blotter/tree/master/pdfs/papers"><code class="highlighter-rouge">pdfs/papers/</code></a> respectively.</p>
 
@@ -150,21 +165,20 @@ github: http://github.com/trvrb/canalization
 
 <p>Each project exists as a separate git repository.  To add a project and have it automatically redeploy when the project’s GitHub repo is updated requires the following two steps:</p>
 
-<h3 id="add-the-project-to-the-jekyll-index">1. Add the project to the Jekyll index</h3>
+<h3 id="1-add-the-project-to-the-jekyll-index">1. Add the project to the Jekyll index</h3>
 
 <p>Open the file <a href="https://github.com/blab/blotter/blob/master/_config.yml"><code class="highlighter-rouge">_config.yml</code></a> and append the full repo name to the YAML <code class="highlighter-rouge">projects</code> listing.  This should then look like:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>projects:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>projects:
   - trvrb/coaltrace
   - trvrb/stem
   ...
   - owner/project-name
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>where <code class="highlighter-rouge">owner</code> and <code class="highlighter-rouge">project-name</code> is specific to the new project.  Commit this change to the <a href="https://github.com/blab/blotter">blotter</a> GitHub repo.</p>
 
-<h3 id="set-a-webhook-from-github">2. Set a webhook from GitHub</h3>
+<h3 id="2-set-a-webhook-from-github">2. Set a webhook from GitHub</h3>
 
 <p>From the project repo, go to Settings / Service Hooks / WebHook URLs, and add <code class="highlighter-rouge">http://blotter-hook.herokuapp.com/</code> to the list.</p>
 
@@ -172,7 +186,7 @@ github: http://github.com/trvrb/canalization
 
 <p>Each team member has a Markdown file in <a href="https://github.com/blab/blotter/tree/master/team/_posts"><code class="highlighter-rouge">team/_posts/</code></a>.  File names are join date followed by first and last name, like <a href="https://github.com/blab/blotter/blob/master/team/_posts/2013-09-30-trevor-bedford.md"><code class="highlighter-rouge">2013-09-30-trevor-bedford.md</code></a>.  YAML follows:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>---
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
 layout: member
 title: Trevor Bedford
 position: Principal investigator
@@ -183,8 +197,7 @@ github: trvrb
 image: /images/team/trevor-bedford.jpg
 cv: /pdfs/team/bedford-cv.pdf
 ---
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Tags <code class="highlighter-rouge">layout</code>, <code class="highlighter-rouge">title</code>, <code class="highlighter-rouge">last name</code>, <code class="highlighter-rouge">position</code>, <code class="highlighter-rouge">handle</code>, <code class="highlighter-rouge">image</code> are required, while <code class="highlighter-rouge">twitter</code>, <code class="highlighter-rouge">github</code>, <code class="highlighter-rouge">cv</code> are optional.  The image should be a 260x260 pixel tile.  All member images and PDFs should be placed in <a href="https://github.com/blab/blotter/tree/master/images/team"><code class="highlighter-rouge">images/team/</code></a> and <a href="https://github.com/blab/blotter/tree/master/pdfs/team"><code class="highlighter-rouge">pdfs/team/</code></a> respectively.</p>
 
