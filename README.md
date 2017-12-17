@@ -1,4 +1,8 @@
-# austen lamacraft
+# Austen Lamacraft
+
+##
+
+At the moment I am deploying on GitHub Pages by building the site locally and then pushing to a `gh-pages` branch. That because Bedford's site uses LESS and I haven't solved how to get that working on GitHub Pages.
 
 ## Build site
 
