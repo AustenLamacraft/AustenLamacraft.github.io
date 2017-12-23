@@ -115,39 +115,9 @@
 	</div>
 	<div class="col-md-8">	
 		<div class="post">
-			<h2 id="purpose">Purpose</h2>
+			<p>This site is a fork of the wonderful <a href="http://bedford.io">bedford.io</a> by Trevor Bedford. Trevor’s site is a true exemplar of open science, with ongoing research described on project pages, each with their own GitHub repo. I’m not at that point yet, but it’s certainly an aspiration.</p>
 
-<p>This site is a fork of <a href="http://bedford.io">Bedford Lab</a> research</p>
-
-<p>This website designed as an open science showcase for recent work from the Bedford Lab.  We have a <a href="/blog/">blog</a> for news and smaller analyses, but also <a href="/projects/">project pages</a> that mirror ongoing research developments that take place on <a href="https://github.com/blab">GitHub</a>.  This structure is meant to make sharing of results as frictionless as possible, with the idea of having a GitHub repo that contains everything of key importance to a project.  Within this GitHub repo, <code class="highlighter-rouge">README.md</code> files or other Markdown files describe methods and results and such files get copied over to <a href="/projects/">projects/</a>, where we’ve attempted to streamline navigation.  So, reading the basics of a project can be done from the site, but if someone wants to really dive in, all the source code, data files, etc… are available from GitHub.</p>
-
-<h2 id="source-code">Source code</h2>
-
-<p>All source code that’s necessary to construct the site is <a href="https://github.com/blab/blotter">freely available on GitHub</a>.  All code is placed under the <a href="https://github.com/blab/blotter#license">MIT license</a>. You’re welcome to borrow / repurpose code to build your own site, but I would very much appreciate attribution and a link back to <a href="http://bedford.io">bedford.io</a> from your <code class="highlighter-rouge">about</code> page.</p>
-
-<h2 id="web-stack">Web stack</h2>
-
-<p>In migrating to Jekyll, I’ve tried to bring the site up to speed with current web standards.  I thought I’d describe the web stack I arrived at.</p>
-
-<h3 id="build">Build</h3>
-
-<p>The site is built with <a href="http://jekyllrb.com/">Jekyll</a>.  This allows the site to be <a href="https://github.com/blab/blotter/commits/master">versioned on GitHub</a> and, importantly, allows anyone with commit access to the GitHub repository to easily contribute.  This makes it possible to have a shared lab blog that multiple people can manage.</p>
-
-<p>Content is stored as simple <a href="http://daringfireball.net/projects/markdown/">Markdown</a> files with a bit of <a href="http://yaml.org/">YAML</a> at the top.  This keeps content mostly semantic and can be easily processed.  An example post can be seen <a href="https://github.com/blab/blotter/blob/master/blog/_posts/2012-02-20-github-of-science.md">here</a>.  In addition to including blog posts, simple Markdown files are included for papers and people, in which case the YAML metadata is bit broader, indicating things like paper PDFs or Twitter handles.</p>
-
-<p>I had wanted to make it possible to point the site at GitHub repos and display their contents in a nicely formatted way.  These are <a href="/projects/">projects</a>, and in their case, there is no data on them in the site, except for a <a href="https://github.com/blab/blotter/blob/master/_config.yml">list of repo names</a>.  Project data is pulled in automatically by cloning the project repo and project metadata is gathered using <a href="http://octokit.github.io/octokit.rb/">Octokit</a> to access the GitHub API via a <a href="https://github.com/blab/blotter/blob/master/_scripts/generate-project-data.rb">preprocessing script</a>.  This allows project pages to display things like a list of contributors and recent commits.</p>
-
-<h3 id="design">Design</h3>
-
-<p>Site layout and design is built on top of <a href="http://getbootstrap.com/">Bootstrap</a>.  This gives a responsive grid to work with as well as a number of useful CSS components like code blocks and nav bars.  On top of this I have included:</p>
-
-<ul>
-  <li>Custom fonts via <a href="http://typekit.com/">Typekit</a></li>
-  <li>Icons via <a href="http://fontawesome.io/">Font Awesome</a></li>
-  <li><a href="http://ethanschoonover.com/solarized">Solarized</a> code highlighting</li>
-  <li>Equation rendering via <a href="http://khan.github.io/KaTeX/">KaTeX</a></li>
-  <li>Infinite scroll via <a href="https://jquery.com/">jQuery</a> and <a href="https://github.com/blab/blotter/blob/master/js/infinite-scroll.js">custom script</a></li>
-</ul>
+<p>I’ve made a few changes, mostly cosmetic at the moment. The code is available <a href="https://github.com/AustenLamacraft/notebook">here</a></p>
 
 		</div>	
 	</div>			
