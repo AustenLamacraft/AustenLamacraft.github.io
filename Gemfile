@@ -13,6 +13,8 @@ gem 'less'
 
 # gem 'jekyll-postfiles'
 
+gem 'jekyll-scholar'
+
 # octokit
 gem 'octokit'
 gem 'netrc'

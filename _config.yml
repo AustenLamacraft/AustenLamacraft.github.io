@@ -5,7 +5,7 @@ url: 'https://lamacraft.io'
 
 markdown: kramdown
 kramdown:
-  math_engine: mathjax
+  math_engine: katex
 
 # Permalinks
 
