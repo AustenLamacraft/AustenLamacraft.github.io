@@ -9,13 +9,13 @@ This post is based on [Andrea Montanari's talk](https://www.newton.ac.uk/seminar
 
 ## A toy problem: $\mathbb{Z}_2$ Synchronization
 
-This is described in {% cite Javanmard:2016aa %}. From the measurements
+This is described in {% cite Javanmard:2016aa %}. From the measurements of the $n \times n$ matrix $Y_{ij}$
 
 $$
 Y = \frac{\lambda}{n}zz^T + \frac{W}{\sqrt{n}},
 $$
 
-we want to recover the $z_i\in\{\pm 1\}$, where $W_{i>j}\in \mathcal{N}(0,1)$, with $W_{ij}=W_{ji}$ and $W_{ii}=0$. $\lambda$ measures the signal-to-noise: for small $\lambda$ it is
+we want to recover the $z_{i}\in\{\pm 1\}$, $i=1,\ldots n$, where $W_{i>j}\in \mathcal{N}(0,1)$, with $W_{ij}=W_{ji}$ and $W_{ii}=0$. Note that the $z_i$ are only determined up to an overall sign. $\lambda$ measures the signal-to-noise: for smaller $\lambda$ it is harder to estimate the $z_i$. In the large $n$ limit there is a phase transition at $\lambda=1$. As we'll see, this corresponds to the ordering of an Ising model with couplings $Y_{ij}$, with $\lambda$ playing the role of inverse temperature.
 
 ## Variational Inference
 
@@ -40,7 +40,7 @@ $$
 p(z,Y;m) = \prod_i p(z_i;m_i) \prod_{i>j} \sqrt{\frac{N}{2\pi}}\exp\left[-\frac{N\left(Y_{ij} - \lambda z_i z_j/n\right)^2}{2}\right].
 $$
 
-Computation of $p(Y;m)$ by marginalizing out $z$ is intractable, so we propose the mean field distribution
+Computation of $p(Y;m)$ by marginalizing out $z$ is intractable -- it corresponds to computing the partition function of an Ising model with couplings $Y_{ij}$ -- so we propose the mean field distribution
 
 $$
 q(z|Y) = \prod_i p(z_i;m_i(Y)).
