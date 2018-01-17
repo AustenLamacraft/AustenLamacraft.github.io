@@ -19,12 +19,6 @@ we want to recover the $z_{i}\in\{\pm 1\}$, $i=1,\ldots n$, where $W_{i>j}\in \m
 
 ## Variational Inference
 
-The $z_i$ are Bernoulli variables, which we parameterize in terms of their expectation
-
-$$
-p(z_i=\pm 1;m_i) = \frac{1\pm m_i}{2}.
-$$
-
 The idea behind variational inference is to maximize the __evidence lower bound__ (ELBO, or negative of the __variational free energy__)
 
 $$
@@ -34,11 +28,34 @@ $$
 for some proposed $q(z|Y)$. The unconstrained maximum occurs for $q(z|Y)=p(z|Y)$, at which
  $\mathcal{L}$ achieves $\log p(Y;m)$, the log probability of the data.
 
+ The variational approach is suited to situations where $p(z|Y)$ is intractable -- usually because it involves computing the normalization factor (or partition function). Replacing it with the 'best' $q(z|Y)$ within some class of tractable distributions then allows inference to be made.
+
+> __Note for physicists.__ The connection to statistical mechanics goes like this. The free energy is
+$$
+F = -k_\text{B}T \log Z,
+$$
+where $Z$ is the partition function (generally intractable). On the other hand, we also know that
+$$
+F = \langle E\rangle - TS,
+$$
+where the first term is average energy, and $S$ is the entropy. The variational approach then replaces the true distribution with some tractable distribution, and calculates the average of the energy and the entropy with respect to this distribution
+$$
+F_\text{var} = \langle E\rangle_\text{var} - TS_\text{var}.
+$$
+The fact that the variational free energy is larger than the true free energy is called the [Bogoliubov inequality](https://en.wikipedia.org/wiki/Helmholtz_free_energy#Bogoliubov_inequality).
+
 Applied to our problem, we have
 
 $$
 p(z,Y;m) = \prod_i p(z_i;m_i) \prod_{i>j} \sqrt{\frac{N}{2\pi}}\exp\left[-\frac{N\left(Y_{ij} - \lambda z_i z_j/n\right)^2}{2}\right].
 $$
+
+The $z_i$ are Bernoulli variables, which we parameterize in terms of their expectation
+
+$$
+p(z_i=\pm 1;m_i) = \frac{1\pm m_i}{2}.
+$$
+
 
 Computation of $p(Y;m)$ by marginalizing out $z$ is intractable -- it corresponds to computing the partition function of an Ising model with couplings $Y_{ij}$ -- so we propose the mean field distribution
 
@@ -52,11 +69,6 @@ $$
 H(q) = -\sum_i \left[\frac{1 +m_i}{2} \log\left(\frac{1\ +m_i}{2}\right) + \frac{1 +m_i}{2} \log\left(\frac{1\ +m_i}{2}\right)\right],
 $$
 
-while
-
-$$
-p=
-$$
 
 
 
