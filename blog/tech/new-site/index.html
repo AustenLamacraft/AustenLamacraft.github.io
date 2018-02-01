@@ -44,7 +44,10 @@
 
 <script>
 	document.addEventListener("DOMContentLoaded", function() {
-		renderMathInElement(document.body);
+		renderMathInElement(document.body,{delimiters: [
+  		{left: "$$", right: "$$", display: true},
+  		{left: "$", right: "$", display: false}
+		]});
 	});
 </script>
 
@@ -135,9 +138,9 @@
 
 <p>Now I’m switching to <a href="https://jekyllrb.com">Jekyll</a>, which I used for the first time over the summer. Relative to a WYSIWYG editor it’s a bit more work, but you feel like you know what’s going on under the bonnet. There’s a large ecosystem, lots of <a href="http://themes.jekyllrc.org">themes</a>, free hosting on <a href="https://pages.github.com">GitHub Pages</a>. The ease of writing in Markdown and rendering mathematics with <a href="https://www.mathjax.org">MathJax</a> is wonderful.</p>
 
-<p>\[
+<div class="kdmath">$$
 \int f(x)\,dx
-\]</p>
+$$</div>
 
 <p>See?</p>
 
@@ -159,4 +162,19 @@
 	<div id="footer"><span style="display:none">foo</span></div>
 
 </body>
+
+
+<!-- Replace MathJax syntax with KaTeX -->
+<script>
+  $("script[type='math/tex']").replaceWith(function() {
+      var tex = $(this).text();
+      return katex.renderToString(tex, {displayMode: false});
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(function() {
+      var tex = $(this).html();
+      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
+  });
+</script>
+
 </html>

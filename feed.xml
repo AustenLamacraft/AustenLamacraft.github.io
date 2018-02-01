@@ -3,8 +3,8 @@
 	<channel>
 		<title>austen lamacraft - Blog</title>
 		<description>Many body and statistical physics at the University of Cambridge</description>
-		<link>https://lamacraft.io</link>
-		<atom:link href="https://lamacraft.io/feed.category.xml" rel="self" type="application/rss+xml" />
+		<link>http://localhost:4000</link>
+		<atom:link href="http://localhost:4000/feed.category.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
 				<title>CUPS Talk</title>
@@ -13,8 +13,8 @@
 &lt;p&gt;Things move on, however, and in recent years a number of browser-based options for rendering slides in HTML have appeared: things like &lt;a href=&quot;https://www.w3.org/Talks/Tools/Slidy&quot;&gt;Slidy&lt;/a&gt; and &lt;a href=&quot;http://lab.hakim.se/reveal-js/#/&quot;&gt;reveal.js&lt;/a&gt;, to name just two. I plumped for reveal.js just because it seemed popular and was easy to get going with (and because I was having a crazy term and there was less than a week to go). Also &lt;a href=&quot;http://pandoc.org&quot;&gt;pandoc&lt;/a&gt;. You can see the result &lt;a href=&quot;https://austenlamacraft.github.io/Talks/CUPS_KPZ/CUPS_KPZ.html&quot;&gt;here&lt;/a&gt;. I was pleased with how it turned out, and see myself making the transition to one of these tools in my conference presentations. I’d like to give the very impressive looking &lt;a href=&quot;https://github.com/impress/impress.js&quot;&gt;impress.js&lt;/a&gt; a try, but perhaps that’s a bit &lt;em&gt;too&lt;/em&gt; flash.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
-				<link>https://lamacraft.io/blog/talk/CUPS-talk/</link>
-				<guid isPermaLink="true">https://lamacraft.io/blog/talk/CUPS-talk/</guid>
+				<link>http://localhost:4000/blog/talk/CUPS-talk/</link>
+				<guid isPermaLink="true">http://localhost:4000/blog/talk/CUPS-talk/</guid>
 			</item>
 		
 			<item>
@@ -23,17 +23,17 @@
 
 &lt;p&gt;Now I’m switching to &lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;, which I used for the first time over the summer. Relative to a WYSIWYG editor it’s a bit more work, but you feel like you know what’s going on under the bonnet. There’s a large ecosystem, lots of &lt;a href=&quot;http://themes.jekyllrc.org&quot;&gt;themes&lt;/a&gt;, free hosting on &lt;a href=&quot;https://pages.github.com&quot;&gt;GitHub Pages&lt;/a&gt;. The ease of writing in Markdown and rendering mathematics with &lt;a href=&quot;https://www.mathjax.org&quot;&gt;MathJax&lt;/a&gt; is wonderful.&lt;/p&gt;
 
-&lt;p&gt;\[
+&lt;div class=&quot;kdmath&quot;&gt;$$
 \int f(x)\,dx
-\]&lt;/p&gt;
+$$&lt;/div&gt;
 
 &lt;p&gt;See?&lt;/p&gt;
 
 &lt;p&gt;It would be great to integrate this with &lt;a href=&quot;https://symplectic.admin.cam.ac.uk&quot;&gt;Symplectic&lt;/a&gt; and / or &lt;a href=&quot;http://orcid.org&quot;&gt;ORCID&lt;/a&gt; to get an automatically updated publication list. Let’s see.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
-				<link>https://lamacraft.io/blog/tech/new-site/</link>
-				<guid isPermaLink="true">https://lamacraft.io/blog/tech/new-site/</guid>
+				<link>http://localhost:4000/blog/tech/new-site/</link>
+				<guid isPermaLink="true">http://localhost:4000/blog/tech/new-site/</guid>
 			</item>
 		
 	</channel>

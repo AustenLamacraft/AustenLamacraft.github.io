@@ -44,7 +44,10 @@
 
 <script>
 	document.addEventListener("DOMContentLoaded", function() {
-		renderMathInElement(document.body);
+		renderMathInElement(document.body,{delimiters: [
+  		{left: "$$", right: "$$", display: true},
+  		{left: "$", right: "$", display: false}
+		]});
 	});
 </script>
 
@@ -101,6 +104,22 @@
 	<div class="container">
 
 	
+    <div class="row">
+		<div class="col-md-4 paperbox">
+			<div class="media">
+  				<a class="pull-right" href="/papers/vortex-molecule-lattices/">
+    				<img width=100 class="media-object" src="/images/papers/vortex-molecules.png">
+  				</a>
+ 			 	<div class="media-body">
+    				<div class="smallhead media-heading"><a href="/papers/vortex-molecule-lattices/" class="off">Infinite Lattices of Vortex Molecules in Rabi-Coupled Condensates</a></div>
+    				<p class="note">arXiv:1801.09912</p>
+  				</div>
+			</div>
+			<div class="bigspacer"></div>
+			<div class="spacer"></div>
+        </div>
+    </div>
+
     <div class="row">
 		<div class="col-md-4 paperbox">
 			<div class="media">
@@ -685,4 +704,19 @@
 	<div id="footer"><span style="display:none">foo</span></div>
 
 </body>
+
+
+<!-- Replace MathJax syntax with KaTeX -->
+<script>
+  $("script[type='math/tex']").replaceWith(function() {
+      var tex = $(this).text();
+      return katex.renderToString(tex, {displayMode: false});
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(function() {
+      var tex = $(this).html();
+      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
+  });
+</script>
+
 </html>

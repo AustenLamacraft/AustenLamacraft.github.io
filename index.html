@@ -44,7 +44,10 @@
 
 <script>
 	document.addEventListener("DOMContentLoaded", function() {
-		renderMathInElement(document.body);
+		renderMathInElement(document.body,{delimiters: [
+  		{left: "$$", right: "$$", display: true},
+  		{left: "$", right: "$", display: false}
+		]});
 	});
 </script>
 
@@ -199,6 +202,23 @@
 		<div class="pad-left">
 			<div class="note">
 				<i class="fa fa-file-text-o fa-fw"></i>
+				<a class="off" href="/papers/vortex-molecule-lattices/">
+				Infinite Lattices of Vortex Molecules in Rabi-Coupled Condensates
+				</a>
+			</div>
+			<div class="smallspacer"></div>
+			<div class="smallnote">
+				Posted
+				30 Jan 2018
+			</div>
+			<div class="bigspacer"></div>
+		</div>
+	</div>
+	
+	<div class="col-md-3 reduced-gutter">
+		<div class="pad-left">
+			<div class="note">
+				<i class="fa fa-file-text-o fa-fw"></i>
 				<a class="off" href="/papers/noisy-spins/">
 				Noisy Spins and the Richardson-Gaudin Model
 				</a>
@@ -241,23 +261,6 @@
 			<div class="smallnote">
 				Posted
 				28 Jun 2016
-			</div>
-			<div class="bigspacer"></div>
-		</div>
-	</div>
-	
-	<div class="col-md-3 reduced-gutter">
-		<div class="pad-left">
-			<div class="note">
-				<i class="fa fa-file-text-o fa-fw"></i>
-				<a class="off" href="/papers/quantum-hydrodynamics/">
-				Quantum Hydrodynamics in One Dimension beyond the Luttinger Liquid
-				</a>
-			</div>
-			<div class="smallspacer"></div>
-			<div class="smallnote">
-				Posted
-				28 Sep 2015
 			</div>
 			<div class="bigspacer"></div>
 		</div>
@@ -371,4 +374,19 @@
 	<div id="footer"><span style="display:none">foo</span></div>
 
 </body>
+
+
+<!-- Replace MathJax syntax with KaTeX -->
+<script>
+  $("script[type='math/tex']").replaceWith(function() {
+      var tex = $(this).text();
+      return katex.renderToString(tex, {displayMode: false});
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(function() {
+      var tex = $(this).html();
+      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
+  });
+</script>
+
 </html>
