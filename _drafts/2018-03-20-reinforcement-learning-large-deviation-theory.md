@@ -1,15 +1,13 @@
 ---
 layout: post
-title: Reinforcement learning and large deviations
+title: Is reinforcement learning the study of large deviations out of equilibrium?
 categories: machine learning
 author: Austen Lamacraft
 ---
 
-# Is reinforcement learning the study of large deviations out of equilibrium?
-
 In contravention of [Betteridge's Law](https://en.wikipedia.org/wiki/Betteridge%27s_law_of_headlines), I'll try and argue that the answer to this question is 'yes'. Whether or not this observation is of any use -- aside from linking two voguish subjects -- is a separate question.
 
-## Reinforcement Learning
+## Reinforcement Learning (RL)
 
 Let's recapitulate the textbook definition of RL as a [Markov decision process](https://en.wikipedia.org/wiki/Markov_decision_process) for an agent in an environment. Our environment changes state with probabilities conditional upon the current state $s_t$ and the action $a_t$ taken by our agent
 
@@ -27,7 +25,7 @@ $$
 
 which depends on the trajectory $(s_t,a_t)$ taken, as well as a possible discount factor $\gamma$ to bias earlier rewards over later ones. Discounting is usually introduced with a constant factor for each time period, but I guess that needs to be generalized to handle a 90 minute football match, say.
 
-The agent's actions are dictated by a __policy__ $\pi(s|a)$ that selects -- perhaps randomly -- the action to be taken given the state of the environment
+The agent's actions are dictated by a __policy__ $\pi(s\|a)$ that selects -- perhaps randomly -- the action to be taken given the state of the environment
 
 $$
 \pi(a|s) = \mathbb{P}(a_t=a|s_t=s).
@@ -35,7 +33,7 @@ $$
 
 Reinforcement learning is concerned with how best to choose the policy to maximize the expected return. The current boom in reinforcement learning, mostly attributed to DeepMind's Atari and AlphaGo successes, centres on using neural networks to learn the process end-to-end without an explicit internal model of environmental states or actions. The idea is that such an approach is suited to 'real-world' tasks where the number of environmental states is huge (or infinite) and / or hard to parameterize explicitly.
 
-## Large deviations for nonequilibrium processes
+## Large deviations for nonequilibrium processes (LD)
 
 Very roughly, large deviation theory is the study of probabilities with 'logarithmic accuracy'. The basic quantity is the __rate function__ asssociated with the limit of a family of probability distributions $P_n$ parameterized by a variable $n$
 
@@ -60,11 +58,30 @@ in which case the [inverse temperature](https://en.wikipedia.org/wiki/Thermodyna
 $$
 \beta = \frac{d\log P_V}{dE} = s'(e)
 $$
+
 depends on the relation $s(e)$ between these two __intensive__ (volume independent) quantities.
 
 By definition rate functions describe the probability of exponentially unlikely events. Why on earth do we care? In thermodynamics there is a simple answer. Consider two systems with fixed total energy $E=E_1+E_2$. Suppose they can share energy, but are only weakly coupled so that the joint distribution of the energies approximately factorizes: $P_{12}(E_1,E_2)\sim P_1(E_1)P_2(E_2)=P_1(E_1)P(E-E_1)$. Then, by taking logs and differentiating with respect to $E_1$, we see that the most likely energy distribution occurs when $\beta_1=\beta_2$. That is: equal temperatures! This is the stastical basis of the [zeroth law of thermodynamics](https://en.wikipedia.org/wiki/Zeroth_law_of_thermodynamics). The point is that when two systems are put in contact, one of the systems may find itself moving to an exponentially unlikely configuration because this maximizes the joint likelihood.
 
-For stochastic processes describing the evolution of a system in time, we may instead consider rate functions associated with the _long time_, rather than the infinite volume limit. These are defined in terms of the probability
+For stochastic processes describing the evolution of a system in time, we may instead consider rate functions associated with _long times_ rather than large volumes. These are defined in terms of the probability of some random quantity that should grow with time, just as then energy grows proportionally to the volume of a thermodynamic system. Natural candidates are provided by the time integrals of some function of the state of the system. For concreteness, suppose that we have a Markov chain on states $\omega_t$ defined in terms of a transition function $\pi(\omega_{t+1}\|\omega_t)$. Given any function $f(\omega)$ on the state space, we can then consider the large deviation function for some quantity
+
+$$
+R_n = \frac{1}{n}\sum_{t=1}^n f(\omega_t).
+$$
+
+More generally, we may want to consider functions that depend on consecutive configurations: $f(\omega_t,\omega_{t+1})$. This would be necessary to keep track of the current in a system of particles, for example.
+
+Despite having a recent [paper](https://arxiv.org/abs/1802.09576) on large deviations in dynamics, I couldn't give you a killer app. In the case of entropy, conservation of energy gave us the zeroth law. There has been some work on nonequilibrium analogs of the zeroth law: see {% cite Pradhan:2010aa %} for instance.
+
+## A connection?
+
+RL and LD look superficially similar. We have some form of stochastic dynamics (though we could also consider deterministic dynamics). Crucially, both involve a time integrated 'reward'. However, two differences are immediately apparent
+
+1. In the case of RL, we have both environment ($s_t$) and agent ($a_t$) states.
+2. RL is concerned with _maximizing_ the reward, whereas LD is concerned with its distribution over stochastic trajectories.
+
+We'll return to the first point in a moment. Point 2 looks more serious. 
+
 
 References
 ----------
