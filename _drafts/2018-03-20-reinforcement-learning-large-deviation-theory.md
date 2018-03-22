@@ -38,7 +38,7 @@ Reinforcement learning is concerned with how best to choose the policy to maximi
 Very roughly, large deviation theory is the study of probabilities with 'logarithmic accuracy'. The basic quantity is the __rate function__ asssociated with the limit of a family of probability distributions $P_n$ parameterized by a variable $n$
 
 $$
-I(r) = -\lim_{n\to\infty} \frac{1}{n}\log P_n(r)
+I(\alpha) = -\lim_{n\to\infty} \frac{1}{n}\log P_n(A=\alpha)
 $$
 
 (I'm following the notation of a recent review {% cite Touchette:2009aa %} for physicists). In physics the most important rate function is the entropy $S$, or more correctly the entropy density $s=S/V$, associated with the thermodynamic (volume to infinity) limit of the probability distribution of a system's energy
@@ -80,7 +80,56 @@ RL and LD look superficially similar. We have some form of stochastic dynamics (
 1. In the case of RL, we have both environment ($s_t$) and agent ($a_t$) states.
 2. RL is concerned with _maximizing_ the reward, whereas LD is concerned with its distribution over stochastic trajectories.
 
-We'll return to the first point in a moment. Point 2 looks more serious. 
+We'll return to the first point in a moment. Point 2 looks more serious. To proceed we invoke the __Gärtner-Ellis theorem__, which says (roughly) that a random variable satisfies a large deviation principle if the scaled _cumulant generating function_
+
+$$
+\lambda(k) = \lim_{n\to\infty} \frac{1}{n}\log \left\langle e^{nk A}\right\rangle
+$$
+
+exists and is differentiable for all $k\in\mathbb{R}$. In this case the rate function $I(\alpha)$ and $\lambda(k)$ are related by a Legendre transformation:
+
+$$
+I(\alpha) = \sup_k \left[k\alpha-\lambda(k)\right].
+$$
+
+Usually $\lambda(k)$ is easier to calculate. We are going to interpret $\lambda(k)$ as a free energy (density), the analog of
+
+$$
+\beta F = -\log Z,
+$$
+
+where $Z$ is the partition function
+
+$$
+Z = \sum_\epsilon  e^{-\beta \epsilon}.
+$$
+
+Now, the free energy has the alternative expression
+
+$$
+\beta F = \beta\langle E\rangle_\beta - S(\beta),
+$$
+
+where the angular brackets denote an expectation with respect to the Boltzmann distribution $P_\beta(\epsilon) = \frac{e^{-\beta \epsilon}}{Z}$, and $S(\beta)$ is the entropy of the same distribution.
+
+In the same way, we may write
+
+$$
+\lambda(k) = k \langle A\rangle_k + s(k),
+$$
+
+where
+
+$$
+s(k) = -\frac{1}{n}\sum_\alpha P_k(\alpha)\log P_k(\alpha),
+$$
+
+is the scaled entropy. In this way we can interpret $\lambda(k)$ as an __entropy regularized__ version of $\langle A\rangle$, governed by the parameter $k$. 
+
+
+{% cite Fox:2015aa %}
+
+{% cite Neu:2017aa %}
 
 
 References
