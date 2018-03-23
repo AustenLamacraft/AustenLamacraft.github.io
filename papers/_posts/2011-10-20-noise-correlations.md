@@ -4,7 +4,7 @@ title: Noise correlations in the expansion of an interacting one-dimensional Bos
 image: /images/papers/array.png
 authors: Austen Lamacraft
 year: 2011
-ref: 	Phys. Rev. A 84, 043632
+ref: 	Phys. Rev. A 84, 043632 (2011)
 journal: Physical Review A
 doi: 	10.1103/PhysRevA.84.043632
 pdf: /pdfs/papers/HBTLL.pdf

@@ -3,10 +3,11 @@ layout: paper
 title: Noisy Spins and the Richardson-Gaudin Model
 image: /images/papers/spectrum-unequal-omega.png
 authors: Daniel A. Rowlands, Austen Lamacraft
-year: 2017
-ref: 	arXiv:1711.00828
-journal: arXiv
-doi:
+year: 2018
+ref: 	Phys. Rev. Lett. 120, 090401 (2018)
+journal: Physical Review Letters
+doi: 10.1103/PhysRevLett.120.090401
+
 pdf: /pdfs/papers/noisy_gaudin_richardson_letter.pdf
 ---
 

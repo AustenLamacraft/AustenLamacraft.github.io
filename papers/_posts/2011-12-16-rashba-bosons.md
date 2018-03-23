@@ -4,7 +4,7 @@ title: Universal phase structure of dilute Bose gases with Rashba spin-orbit cou
 image: /images/papers/rashba-bosons.png
 authors: Sarang Gopalakrishnan, Austen Lamacraft, Paul M. Goldbart
 year: 2011
-ref: 	Phys. Rev. A 84, 061604(R)
+ref: 	Phys. Rev. A 84, 061604(R) (2011)
 journal: Physical Review A
 doi: 	doi.org/10.1103/PhysRevA.84.061604
 pdf: /pdfs/papers/rashba-bosons.pdf
