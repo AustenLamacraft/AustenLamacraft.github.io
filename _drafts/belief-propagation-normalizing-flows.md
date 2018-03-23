@@ -2,6 +2,8 @@
 
 This note explores the possible connection between these two approaches.
 
+Also real NVP
+
 ## Belief Propagation
 
 [Belief Propagation](https://en.wikipedia.org/wiki/Belief_propagation) is an algorithm for computing the marginal distribution of variables in a
