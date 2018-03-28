@@ -124,7 +124,9 @@ $$
 s(k) = -\frac{1}{n}\sum_\alpha P_k(\alpha)\log P_k(\alpha),
 $$
 
-is the scaled entropy. In this way we can interpret $\lambda(k)$ as an __entropy regularized__ version of $\langle A\rangle$, governed by the parameter $k$. 
+is the scaled entropy. In this way we can interpret $\lambda(k)/k$ as an __entropy regularized__ version of $\langle A\rangle_k$, governed by the parameter $k$.
+
+Applied to a stochastic process, 
 
 
 {% cite Fox:2015aa %}
