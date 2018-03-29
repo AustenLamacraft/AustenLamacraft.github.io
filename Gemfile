@@ -18,3 +18,5 @@ gem 'jekyll-scholar'
 # octokit
 gem 'octokit'
 gem 'netrc'
+
+gem 'jekyll-font-awesome-sass'

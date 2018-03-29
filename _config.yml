@@ -25,7 +25,8 @@ sass:
         - _sass
         - node_modules
 
-include: ["node_modules"]
+plugins:
+  - jekyll-font-awesome-sass
 
 exclude:
   - "*.class"
