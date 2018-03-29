@@ -11,7 +11,7 @@ $pre-color: #586E75;
 $well-bg: #f8f8f8;
 $code-bg: #f8f8f8;
 $pre-bg: #f8f8f8;
-// $nav-pills-active-link-hover-bg: $navbar-default-bg;
+$nav-pills-active-link-hover-bg: $gray-600;
 $nav-pills-active-link-hover-color: $gray-600;
 
 @import "font-awesome/fontawesome.scss";
@@ -208,7 +208,7 @@ pre code {
 }
 
 // table {
-// 	@include table-responsive;
+// 	@include table;
 // // 	@include table-striped;
 // }
 
@@ -303,12 +303,12 @@ img.avatar {
 	height: 80px;
 }
 
-// .footernav {
-// 	@include note;
-// 	@include text-dark-gray;
-// 	text-align: center;
-// 	margin-right: 2px;
-// }
+.footernav {
+	note:
+	text-dark-gray;
+	text-align: center;
+	margin-right: 2px;
+}
 
 .centered-pills {
     text-align: center
