@@ -11,13 +11,13 @@ $pre-color: #586E75;
 $well-bg: #f8f8f8;
 $code-bg: #f8f8f8;
 $pre-bg: #f8f8f8;
-$nav-pills-active-link-hover-bg: $navbar-default-bg;
-$nav-pills-active-link-hover-color: $gray;
+// $nav-pills-active-link-hover-bg: $navbar-default-bg;
+$nav-pills-active-link-hover-color: $gray-600;
 
-@import "/css/font-awesome/fontawesome.scss";
+@import "font-awesome/fontawesome.scss";
 $fa-font-path: "font";
 
-@import "/css/solarized.scss";
+@import "solarized.scss";
 h1, .h1 { font-size: floor($font-size-base * 2.50); } /* ~34px */
 h2, .h2 { font-size: floor($font-size-base * 2.15); } /* ~30px */
 h3, .h3 { font-size: ceil($font-size-base * 1.70); }  /* ~24px */
@@ -161,11 +161,11 @@ h6 {
 }
 
 .text-gray {
-	color: $gray-light;
+	color: $gray-600;
 }
 
 .text-dark-gray {
-	color: $gray;
+	color: $gray-800;
 }
 
 /* other */
@@ -207,13 +207,13 @@ pre code {
     white-space: pre;
 }
 
-table {
-	@include table;
-	@include table-striped;
-}
+// table {
+// 	@include table-responsive;
+// // 	@include table-striped;
+// }
 
 img {
-	@include img-responsive;
+	@include img-fluid;
 }
 
 img.offset {
@@ -236,13 +236,6 @@ img.avatar {
 .post iframe {
   padding-top: 10px;
   padding-bottom: 20px;
-}
-
-blockquote {
-	@include text-gray;
-	p {
-    font-size: ($font-size-base * 1.00);
-    }
 }
 
 .breadcrumb {
@@ -310,12 +303,12 @@ blockquote {
 	height: 80px;
 }
 
-.footernav {
-	@include note;
-	@include text-dark-gray;
-	text-align: center;
-	margin-right: 2px;
-}
+// .footernav {
+// 	@include note;
+// 	@include text-dark-gray;
+// 	text-align: center;
+// 	margin-right: 2px;
+// }
 
 .centered-pills {
     text-align: center
