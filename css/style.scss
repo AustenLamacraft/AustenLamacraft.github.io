@@ -15,7 +15,7 @@ $nav-pills-active-link-hover-bg: $gray-600;
 $nav-pills-active-link-hover-color: $gray-600;
 
 @import "font-awesome/fontawesome.scss";
-$fa-font-path: "font";
+$fa-font-path: "webfonts";
 
 @import "solarized.scss";
 h1, .h1 { font-size: floor($font-size-base * 2.50); } /* ~34px */
