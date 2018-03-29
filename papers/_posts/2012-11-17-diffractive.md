@@ -4,7 +4,7 @@ title: "Diffractive scattering of three particles in one dimension: a simple res
 image: /images/papers/ScatteringGeometry.png
 authors: Austen Lamacraft
 year: 2013
-ref: Phys. Rev. A 87, 012707
+ref: Phys. Rev. A 87, 012707 (2013)
 journal: Physical Review A
 doi: 10.1103/PhysRevA.87.012707
 pdf: /pdfs/papers/3ParticlePaper.pdf

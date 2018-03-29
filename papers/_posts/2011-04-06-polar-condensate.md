@@ -4,7 +4,7 @@ title: Phase Diagram of Two-Dimensional Polar Condensates in a Magnetic Field
 image: /images/papers/PhaseDiagram.png
 authors: A. J. A. James and A. Lamacraft
 year: 2011
-ref: 	Phys. Rev. Lett. 106, 140402
+ref: 	Phys. Rev. Lett. 106, 140402 (2011)
 journal: Physical Review Letters
 doi: 	10.1103/PhysRevLett.106.140402
 pdf: /pdfs/papers/plrcnddwsim5.pdf
