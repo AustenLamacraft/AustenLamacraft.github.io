@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Van Kampen's objection and OTOCs
-categories: statistical physics
+categories: drafts
 author: Austen Lamacraft
 ---
 

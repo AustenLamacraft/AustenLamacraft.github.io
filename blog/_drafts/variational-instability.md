@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Instabilities in Mean Field Variational Bayes
-categories: machine learning
+categories: drafts
 author: Austen Lamacraft
 ---
 

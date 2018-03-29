@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Is reinforcement learning the study of large deviations out of equilibrium?
-categories: machine learning
+categories: drafts
 author: Austen Lamacraft
 ---
 
@@ -126,7 +126,7 @@ $$
 
 is the scaled entropy. In this way we can interpret $\lambda(k)/k$ as an __entropy regularized__ version of $\langle A\rangle_k$, governed by the parameter $k$.
 
-Applied to a stochastic process, 
+Applied to a stochastic process,
 
 
 {% cite Fox:2015aa %}

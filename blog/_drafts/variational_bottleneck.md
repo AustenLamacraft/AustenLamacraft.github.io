@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Variational Information Bottleneck
-categories: machine learning
+categories: drafts
 author: Austen Lamacraft
 ---
 
