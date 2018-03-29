@@ -20,6 +20,10 @@ redcarpet:
    - superscript
    - strikethrough
 
+sass:
+    load_paths:
+        - _sass
+        - node_modules
 
 exclude:
   - "*.class"
