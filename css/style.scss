@@ -304,8 +304,8 @@ img.avatar {
 }
 
 .footernav {
-	.note
-	.text-dark-gray
+	&.note{}
+	.text-dark-gray{}
 	text-align: center;
 	margin-right: 2px;
 }
